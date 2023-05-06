@@ -6,7 +6,78 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-		/* Your styles here! */
+
+		.main {
+		  display: grid;
+		  grid-template-columns: 1fr;
+		  grid-gap: 2rem;
+		  padding: 1rem;
+		  font-family: sans-serif;
+		  font-size: 14px;
+		}
+
+		article {
+		  display: flex;
+		  flex-direction: column;
+		  background-color: aquamarine;
+		  padding: 1rem;
+		}
+
+		img {
+		 width: 100%;
+		 object-fit: cover;
+		}
+
+		.features-list {
+			justify-content: flex-end;
+			align-items: end;
+			display: flex;
+			flex-direction: row;
+			gap: .5rem;
+		}
+
+		.features-list div {
+			height: fit-content;
+			font-size: 1.5rem;
+			background-color: antiquewhite;
+			padding: .25rem .5rem;
+			border-radius: 10px;
+		}
+
+		.features {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.features * {
+			margin: 0px;
+		}
+
+		@media screen and (min-width: 880px) {
+			.main {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			img {
+				width: 200px;
+			}
+
+			article {
+				flex-direction: row;
+				gap: 1rem;
+			}
+
+			.features-list {
+				flex-grow: 1;
+				justify-content: flex-end;
+			}
+
+			h1 {
+				margin-top: 0;
+			}
+		}
 		
 	</style>
 </head>
